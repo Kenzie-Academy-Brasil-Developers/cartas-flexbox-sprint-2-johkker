@@ -6,16 +6,31 @@ html {
     background-color: #FFFFFF;
 }
 
+body {
+  max-width: 710px;
+  margin: auto;
+  margin-top: 100px;
+
+}
+footer {
+  height: 100px;
+}
 .icon {color: #BCD2DA;}
 
 .card {
     /* display, flex-direction */
+    display: flex;
+    flex-direction: column;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
 }
 
 .card__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
     /* display, flex-direction, justify-content, align-items */
     padding: 15px 0;
 }
@@ -41,7 +56,8 @@ html {
 
 .cardGroup {
     /* display */
-  
+    display: flex;
+    max-width: 100%;
     border: 1px solid #CAD0D2;
     border-radius: 4px;
     overflow: hidden;
@@ -49,6 +65,9 @@ html {
   
     .cardGroup__card {
       /* flex-grow, flex-shrink, flex-basis */
+      flex-basis: 100px;
+      flex-grow: 1;
+      flex-shrink: 1;
   
       border: none;
       border-radius: 0;
@@ -60,4 +79,19 @@ html {
   
     .cardGroup__cardDescription {
       /* flex-grow, flex-shrink, flex-basis */
+      flex-basis: 33%;
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+
+
+    @media screen and (max-width: 320px) {
+     .cardGroup {
+      max-width: 80%; 
+      flex-direction: column;
+      height: 500px;
+      margin: auto;
+      align-content: space-evenly;
+    
+    } 
     }
